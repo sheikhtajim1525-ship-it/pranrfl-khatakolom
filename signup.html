@@ -1,3 +1,31 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+</head>
+<body>
+  <h2>সাইন আপ</h2>
+
+  <input type="text" id="username" placeholder="ইউজারনেম"><br><br>
+  <input type="password" id="password" placeholder="পাসওয়ার্ড"><br><br>
+
+  <button onclick="signup()">Sign Up</button>
+
+<script>
+function signup(){
+  let u = document.getElementById("username").value;
+  let p = document.getElementById("password").value;
+
+  localStorage.setItem("username", u);
+  localStorage.setItem("password", p);
+
+  alert("একাউন্ট তৈরি হয়েছে!");
+  window.location.href = "login.html";
+}
+</script>
+</body>
+</html>
 
 <!DOCTYPE html>
 <html lang="bn">
