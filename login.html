@@ -1,3 +1,37 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+</head>
+<body>
+  <h2>লগ ইন</h2>
+
+  <input type="text" id="username" placeholder="ইউজারনেম"><br><br>
+  <input type="password" id="password" placeholder="পাসওয়ার্ড"><br><br>
+
+  <button onclick="login()">Login</button>
+
+  <p>একাউন্ট নেই? <a href="signup.html">Sign Up</a></p>
+
+<script>
+function login(){
+  let u = document.getElementById("username").value;
+  let p = document.getElementById("password").value;
+
+  let su = localStorage.getItem("username");
+  let sp = localStorage.getItem("password");
+
+  if(u === su && p === sp){
+    alert("লগ ইন সফল!");
+    window.location.href = "index.html";
+  } else {
+    alert("ভুল ইউজারনেম বা পাসওয়ার্ড!");
+  }
+}
+</script>
+</body>
+</html>
 
 <!DOCTYPE html>
 <html lang="bn">
